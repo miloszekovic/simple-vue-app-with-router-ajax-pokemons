@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Vue app</title>
+
+  <style>
+    body {
+      font-size: 14px;
+    }
+    ul, p, img {
+      display: block;
+    }
+    nav a {
+      color: blue;
+    }
+    nav a.router-link-active {
+      color: red;
+    }
+    img {
+      width: 50px;
+      height: auto;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div id="app">
+    <nav>
+      <router-link to="/" exact>Home</router-link>
+      <router-link to="/pokemons">Pokemons</router-link>
+      <router-link to="/stuff">Stuff</router-link>
+    </nav>
+
+    <router-view></router-view>
+
+    <footer>
+      Some super cool footer
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
